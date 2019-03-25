@@ -54,7 +54,7 @@ Anaconda / Jupyter notebook 기본 세팅으로 사용
 기본 설치 위치가 공동 작업 공간으로 되어있어서, 개별 가상 환경을 만들고 작업을 진행하는 것을 추천. 
 
 예제: `yongkyung@da-server:/HDD$ conda create -n yk-tensorflow-gpu tensorflow-gpu`
-![conda_example](./img/conda_example.png)
+![conda_example](./conda_example.png)
 
 * 가상환경 확인: `conda env list`
 * 가상환경 실행: `source activate <env name>`
@@ -62,7 +62,7 @@ Anaconda / Jupyter notebook 기본 세팅으로 사용
 * Jupyter Notebook 설치가 안된 경우: `conda install jupyter notebook`
 
 예제: `(yk-tensorflow-gpu) yongkyung@da-server:/HDD$ conda install keras`
-![conda_install_example](./img/conda_install_example.png)
+![conda_install_example](./conda_install_example.png)
 
 **참고자료** 
 * https://niceman.tistory.com/85
