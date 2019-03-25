@@ -41,7 +41,8 @@ HDD (DA-lab)
 
 
 ## SSH program
-SSH Shell program을 통해 서버 터미널에 접속. 추천 프로그램: putty+Xming / MobaXterm
+SSH Shell program을 통해 서버 터미널에 접속. 추천 프로그램: putty+Xming / MobaXtermS
+OpenSSH(22) 대신에 지정 포트를 사용하여 접속
 
 **참고자료**
 * https://m.blog.naver.com/PostView.nhn?blogId=pgh7092&logNo=221256069394&proxyReferer=https%3A%2F%2Fwww.google.com%2F
