@@ -27,7 +27,7 @@ HDD (DA-lab)
 ## 서버 상태 확인 
 * 하드 용량 체크: `df -h`
 * 메모리 체크: `free -m`
-* GPU 체크: `nvidia -smi`
+* GPU 체크: `nvidia-smi`
 
 
 ## Account 
