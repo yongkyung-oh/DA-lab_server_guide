@@ -53,13 +53,12 @@ OpenSSH 대신에 지정 포트를 사용하여 접속
 Anaconda / Jupyter notebook 기본 세팅으로 사용 
 
 가상 환경을 사용하여 작업 `conda create -n [env name] [env packages]` 
-기본 설치 위치가 공동 작업 공간으로 되어있어서, 개별 가상 환경을 만들고 작업을 진행하는 것을 추천. 
 
 예제: `yongkyung@da-server:/HDD$ conda create -n yk-tensorflow-gpu tensorflow-gpu`
 ![conda_example](/conda_example.PNG)
 
 * 가상환경 확인: `conda env list`
-* 가상환경 실행: `source activate <env name>`
+* 가상환경 실행: `conda activate <env name>`
 * 가상환경 종료: `conda deactivate`
 * Jupyter Notebook 설치가 안된 경우: `conda install jupyter notebook`
 
@@ -104,6 +103,10 @@ print(os.environ['CONDA_DEFAULT_ENV'])
 1. 기본 코드 작성 및 테스트는 개인 PC 에서 진행
 2. 대용량 연산 및 작업 진행이 필요할때는 서버에서 작업
 3. 백업이 필요한 코드,데이터,결과물의 경우 `Workspace`에 복사하여 수행 (매일 새벽 3시~5시에 동기화 수행 예정)
+
+
+## Example: Install conda to deep-learning
+
 
 
 ## Contact
