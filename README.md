@@ -46,6 +46,7 @@ SSH Shell program을 통해 서버 터미널에 접속. 추천 프로그램: put
 OpenSSH 대신에 지정 포트를 사용하여 접속
 
 **참고자료**
+* https://mobaxterm.mobatek.net/download.html
 * https://m.blog.naver.com/PostView.nhn?blogId=pgh7092&logNo=221256069394&proxyReferer=https%3A%2F%2Fwww.google.com%2F
 
 
