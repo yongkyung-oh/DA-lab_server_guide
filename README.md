@@ -100,6 +100,10 @@ anaconda를 사용하여 만든 가상환경에서 Jupyter notebook을 실행.
 3. 백업이 필요한 코드,데이터,결과물의 경우 `Workspace`에 복사하여 수행 (매일 새벽 3시~5시에 동기화 수행 예정)
 
 
+## Performance test
+![Performance](/performance.PNG)
+
+
 ## Example: Install conda to deep-learning
 #### Anaconda 설치
 1. Shared Space로 이동 `cd /HDD/Saredspace`
