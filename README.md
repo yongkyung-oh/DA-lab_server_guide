@@ -24,6 +24,16 @@ HDD (DA-lab)
 ```
 
 
+## SSH program
+SSH Shell program을 통해 서버 터미널에 접속. 추천 프로그램: putty+Xming / MobaXtermS
+
+OpenSSH 대신에 지정 포트를 사용하여 접속
+
+**참고자료**
+* https://mobaxterm.mobatek.net/download.html
+* https://m.blog.naver.com/PostView.nhn?blogId=pgh7092&logNo=221256069394&proxyReferer=https%3A%2F%2Fwww.google.com%2F
+
+
 ## 서버 상태 확인 
 * 하드 용량 체크: `df -h`
 * 메모리 체크: `free -m`
@@ -38,16 +48,6 @@ HDD (DA-lab)
 ## R-studio server 
 웹브라우저를 통해 바로 접속 가능
 `[Server IP]:8787`
-
-
-## SSH program
-SSH Shell program을 통해 서버 터미널에 접속. 추천 프로그램: putty+Xming / MobaXtermS
-
-OpenSSH 대신에 지정 포트를 사용하여 접속
-
-**참고자료**
-* https://mobaxterm.mobatek.net/download.html
-* https://m.blog.naver.com/PostView.nhn?blogId=pgh7092&logNo=221256069394&proxyReferer=https%3A%2F%2Fwww.google.com%2F
 
 
 ## Python (Anaconda)
