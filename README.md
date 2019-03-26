@@ -1,4 +1,4 @@
-DA-lab_server_guide v0.5
+DA-lab_server_guide v0.6
 =============
 Guideline for DA-lab server
 
@@ -75,13 +75,14 @@ Anaconda / Jupyter notebook 기본 세팅으로 사용
 anaconda를 사용하여 만든 가상환경에서 Jupyter notebook을 실행. 
 
 #### 1. 가상환경 내에서 바로 실행
-* 가상환경을 실행 `source activate [env name]`
+* 가상환경을 실행 `conda activate [env name]`
+* Jupyter Notebook 설치 `conda install jupyter notebook`
 * Jupyter Notebook 실행 `jupyter notebook`
 * GUI를 불러와서 작업 수행
 
 #### 2. Kernel 추가
 * Jupyter Notebook에 Kernel 추가
-`python -m ipykernel install --user --name [virtualEnv] --display-name "[displayKenrelName]`
+`python -m ipykernel install --user --name [env name] --display-name "[display kenrel name]`
 * Jupyter Notebook 실행 `jupyter notebook`
 * Kernel 을 선택하여 notebook 작성 
 
@@ -92,13 +93,6 @@ anaconda를 사용하여 만든 가상환경에서 Jupyter notebook을 실행.
 * 터미널에서 Token 정보를 복사하여 서버에 로그인
 * Kernel 을 선택하여 notebook 작성 
 
-**참고**
-현재 작업중인 가상환경 확인 코드
-```
-import os 
-print(os.environ['CONDA_DEFAULT_ENV'])
-```
-
 
 ## 서버 활용 방법 
 1. 기본 코드 작성 및 테스트는 개인 PC 에서 진행
@@ -107,9 +101,75 @@ print(os.environ['CONDA_DEFAULT_ENV'])
 
 
 ## Example: Install conda to deep-learning
+#### Anaconda 설치
+1. Shared Space로 이동 `cd /HDD/Saredspace`
+2. 설치 파일 실행 `./Anaconda3-2018.12-Linux-x86_64.sh`
+3. 환경변수 설정 `source ~/.bashrc `
+4. 최신 버전으로 업데이트 `conda update conda`
 
+#### 가상환경 생성
+Keras 예제를 GPU로 수행
+1. Keras와 Dependencies 를 설치하기 위한 가상 환경 세팅 `conda create -n [env name] python=3.6`
+2. 설치된 가상환경 확인 `conda env list`
+3. 가상환경을 실행 `conda activate [env name]`
+4. 기본 패키지 설치 
+    `conda install tensorflow-gpu`
+    `conda install keras`
+    `conda install matplotlib`
+    `conda install jupyter notebook`
+    혹은 `conda install tensorflow-gpu keras matplotlib jupyter notebook`
 
+#### Jupyter Notebook 실행 및 접속
+1. Jupyter notebook 실행 -> GUI 사용 `jupyter notebook`
+2. IP 및 포트를 지정하여 실행 -> 토큰 인증 후 로컬 웹브라우저에서 사용 `jupyter notebook --ip=[Server IP] --port=xxxx`
+
+#### 예제 코드 실행
+* 현재 작업중인 가상환경 확인 코드
+```{.python}
+import os 
+print(os.environ['CONDA_DEFAULT_ENV'])
+```
+
+* 시스템 확인 코드
+```{.python}
+import sys
+import tensorflow as tf
+import keras
+print('Python version : ', sys.version)
+print('TensorFlow version : ', tf.__version__)
+print('Keras version : ', keras.__version__)
+```
+
+* 사용 가능한 디바이스 확인 코드
+```{.python}
+from tensorflow.python.client import device_lib
+device_lib.list_local_devices()
+```
+
+* Hello World example using tensorflow
+```{.python}
+import tensorflow as tf
+
+# Simple hello world using TensorFlow
+hello = tf.constant('Hello, TensorFlow!')
+
+# Start tf session
+sess = tf.Session()
+
+# Run show constant
+print(sess.run(hello).decode)
+```
+
+#### Keras CNN 예제 파일 실행
+`/HDD/Sharedspace/Keras CNN example.ipynb` 실행
+![CNN](/cnn.jpg)
+
+#### 가상환경 정리 및 삭제 
+1. 설치된 가상환경 확인 `conda env list`
+2. 가상환경 캐시 삭제 `conda clean -all` 혹은 `conda clean -a`
+3. 가상환경 삭제 `conda remove -n [env name] --all`
+
+## Example: Using Docker for deep-learning
 
 ## Contact
 YongKyung Oh, ok19925@unist.ac.kr
-
