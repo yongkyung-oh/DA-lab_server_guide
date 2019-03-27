@@ -96,6 +96,10 @@ anaconda를 사용하여 만든 가상환경에서 Jupyter notebook을 실행.
 * Kernel 을 선택하여 notebook 작성 
 
 
+## 파이참 
+`pycharm-community` 로 실행 가능. Interpreter 설정을 위해 가상환경을 생성 후 활용. 
+
+
 ## 서버 활용 방법 
 1. 기본 코드 작성 및 테스트는 개인 PC 에서 진행
 2. 대용량 연산 및 작업 진행이 필요할때는 서버에서 작업
@@ -175,7 +179,9 @@ print(sess.run(hello).decode)
 2. 가상환경 캐시 삭제 `conda clean -all` 혹은 `conda clean -a`
 3. 가상환경 삭제 `conda remove -n [env name] --all`
 
+
 ## Example: Using Docker for deep-learning
+*Will be updated*
 
 ## Contact
 YongKyung Oh, ok19925@unist.ac.kr
