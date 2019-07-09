@@ -55,6 +55,9 @@ OpenSSH (22) 대신에 지정 포트를 사용하여 접속. Remote host를 `[Se
 ## Python (Anaconda)
 Anaconda / Jupyter notebook 기본 세팅으로 사용 
 
+Anaconda 설치여부 확인 
+* 미설치시 `Sharedspace/Anaconda~` 파일을 `bash` 명령어로 설치
+
 가상 환경을 사용하여 작업 `conda create -n [env name] [env packages]` 
 
 예제: `yongkyung@da-server:/HDD$ conda create -n yk-tensorflow-gpu tensorflow-gpu`
