@@ -27,7 +27,7 @@ HDD (DA-lab)
 ## SSH program
 SSH Shell program을 통해 서버 터미널에 접속. 추천 프로그램: putty+Xming / MobaXterm
 
-OpenSSH (22) 대신에 지정 포트를 사용하여 접속. Remote host를 `[Server IP`로 입력하고, Port를 지정된 번호로 입력해야 접속 가능. 
+OpenSSH (22) 대신에 지정 포트를 사용하여 접속. Remote host를 `[Server IP]`로 입력하고, Port를 지정된 번호로 입력해야 접속 가능. 
 
 ![session](/session.PNG)
 
