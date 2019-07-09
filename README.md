@@ -131,6 +131,7 @@ Keras 예제를 GPU로 수행
     `conda install matplotlib`
     `conda install jupyter notebook`
     혹은 `conda install tensorflow-gpu keras matplotlib jupyter notebook`
+5. (선택) Pytorch 설치 `conda install pytorch torchvision cudatoolkit=10.0 -c pytorch` 
 
 #### Jupyter Notebook 실행 및 접속
 1. Jupyter notebook 실행 -> GUI 사용 `jupyter notebook`
@@ -148,15 +149,24 @@ print(os.environ['CONDA_DEFAULT_ENV'])
 import sys
 import tensorflow as tf
 import keras
+import torch
 print('Python version : ', sys.version)
 print('TensorFlow version : ', tf.__version__)
 print('Keras version : ', keras.__version__)
+print('Pytorch version : ', torch.__virsion__)
 ```
 
 * 사용 가능한 디바이스 확인 코드
 ```{.python}
 from tensorflow.python.client import device_lib
 device_lib.list_local_devices()
+```
+
+* Cuda 사용 여부 확인 코드
+```{.python}
+use_cuda = torch.cuda.is_available()
+device = torch.device("cuda" if use_cuda else "cpu")
+print("Using {}".format(device))
 ```
 
 * Hello World example using tensorflow
