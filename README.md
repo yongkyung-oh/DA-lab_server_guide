@@ -1,4 +1,4 @@
-DA-lab_server_guide v0.6
+DA-lab_server_guide v0.7
 =============
 Guideline for DA-lab server
 
@@ -9,20 +9,23 @@ Guideline for DA-lab server
 
 
 ## Sharedspace / Workspace  
-Server 내 HDD (4TB) 작업환경 공유. 개인 환경 및 공유 환경. 
-Workspace는 주기적으로 백업 계획 (~500GB)
+Server 내 HDD와 SSD 작업환경 공유. 개인 환경 및 공유 환경. 
+대용량 작업 시 HDD / 빠른 속도 필요 시 SSD 사용
+
 
 `\\[Server IP]`
 
 ```
 HDD (DA-lab)
-|   Guide
 |   Sharedspace
-|   Workspace
 |   Indiviudal Folder 
 |   ...
 ```
-
+```
+SSD (DA-lab)
+|   Indiviudal Folder 
+|   ...
+```
 
 ## SSH program
 SSH Shell program을 통해 서버 터미널에 접속. 추천 프로그램: putty+Xming / MobaXterm
@@ -98,6 +101,8 @@ anaconda를 사용하여 만든 가상환경에서 Jupyter notebook을 실행.
 * 터미널에서 Token 정보를 복사하여 서버에 로그인
 * Kernel 을 선택하여 notebook 작성 
 
+아래 내용 확인
+https://www.notion.so/Jupyter-70d36d8734514672a543999d9432e379
 
 ## 파이참 
 `pycharm-community` 로 실행 가능. Interpreter 설정을 위해 가상환경을 생성 후 활용. 
